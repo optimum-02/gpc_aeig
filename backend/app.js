@@ -6,7 +6,7 @@ const app = express();
 const server = createServer(app);
 const io = new Server(server);
 
-import appConfig from './src/config/app_config';
+import appConfig from './src/config/app_config.js';
 
 io.on('connection', (socket) => {
   console.log('a user connected');
@@ -15,3 +15,5 @@ io.on('connection', (socket) => {
 server.listen(appConfig.port, () => {
   console.log(`server running at http://localhost:${appConfig.port}`);
 });
+
+export default app;

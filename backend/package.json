@@ -1,5 +1,6 @@
 {
   "name": "gpc_aeig",
+  "type": "module",
   "version": "1.0.0",
   "description": "Mini plateforme de gestion de projets collaboratifs",
   "main": "app.js",
@@ -27,7 +28,7 @@
     "joi": "^17.13.3",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.6.2",
-    "socket_io": "^1.0.0"
+    "socket.io": "^4.7.5"
   },
   "devDependencies": {
     "@eslint/js": "^9.10.0",
