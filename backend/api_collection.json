@@ -1,0 +1,88 @@
+{
+    "info": {
+        "_postman_id": "074afa1f-9488-4e14-9aa9-a1eef51becad",
+        "name": "gpc_aeig",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "AUTH",
+            "item": [
+                {
+                    "name": "signup",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "auth/signup",
+                            "path": [
+                                "signup"
+                            ],
+                            "host": [
+                                "auth"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"email\":\"mawou10.aa@gmail.com\",\n  \"firstName\" : \"Amédée\",\n  \"lastName\":\"AHOTOn\",\n  \"role\":\"admin\",\n  \"password\":\"12345678\"\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "login",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "auth/login",
+                            "path": [
+                                "login"
+                            ],
+                            "host": [
+                                "auth"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"email\":\"mawou9.aa@gmail.com\",\n  \"password\":\"12345678\"\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "currentUser",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "auth/user",
+                            "path": [
+                                "user"
+                            ],
+                            "host": [
+                                "auth"
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "bearer",
+        "bearer": [
+            {
+                "key": "token",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZWE5NWI4YWU1NmMzZmFhODYxYTJkNiIsImVtYWlsIjoibWF3b3U5LmFhQGdtYWlsLmNvbSIsImlhdCI6MTcyNjY1MTc2OH0.do_UV7p1NgxUMG_JT5v-i9okP5oIQPPwCWlRJV7SCEo",
+                "type": "string"
+            }
+        ]
+    }
+}
