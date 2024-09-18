@@ -15,7 +15,7 @@ const { errorMiddleware } = require('./middlewares/error_middleware.js');
 app.use(express.json());
 app.use(scopePerRequest(container));
 app.use(apiRoutes);
-// app.use(errorMiddleware)
+app.use(errorMiddleware)
 
 io.on('connection', (socket) => {
   console.log('a user connected');
